@@ -1,0 +1,30 @@
+﻿La génération a démarré 29/01/2013 21:29:29.
+     1>Projet "C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Jeux de Jongles Visual Studio\Jeux de Jongles Visual Studio.vcxproj" sur le nœud 2 (build cible(s)).
+     1>InitializeBuildStatus:
+         Création de "Debug\Jeux de Jongles Visual Studio.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+       CustomBuild:
+         Toutes les sorties sont à jour.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /IC:\Qt\4.8.4\include /I.\GeneratedFiles\Debug /IC:\Qt\4.8.4\include\QtCore /IC:\Qt\4.8.4\include\QtGui /Zi /nologo /W1 /WX- /Od /Oy- /D UNICODE /D WIN32 /D QT_LARGEFILE_SUPPORT /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt fenetre.cpp
+         fenetre.cpp
+       ResourceCompile:
+         Toutes les sorties sont à jour.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Win32\Debug\\Jeux de Jongles Visual Studio.exe" /NOLOGO /LIBPATH:C:\Qt\4.8.4\lib qtmaind.lib QtCored4.lib QtGuid4.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\Jeux de Jongles Visual Studio.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Win32\Debug\Jeux de Jongles Visual Studio.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Win32\Debug\Jeux de Jongles Visual Studio.lib" /MACHINE:X86 "Debug\Jeux de Jongles Visual Studio.res"
+         Debug\ballon.obj
+         Debug\fenetre.obj
+         Debug\moc_fenetre.obj
+         Debug\main.obj
+         Debug\tete.obj
+         LINK : C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Win32\Debug\\Jeux de Jongles Visual Studio.exe introuvable ou non généré par la dernière édition de liens incrémentielle ; édition de liens complète en cours
+         Jeux de Jongles Visual Studio.vcxproj -> C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Win32\Debug\Jeux de Jongles Visual Studio.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Win32\Debug\\Jeux de Jongles Visual Studio.exe;#1" /manifest "Debug\Jeux de Jongles Visual Studio.exe.intermediate.manifest"
+       FinalizeBuildStatus:
+         Suppression du fichier "Debug\Jeux de Jongles Visual Studio.unsuccessfulbuild".
+         Mise à jour de l'horodatage "Debug\Jeux de Jongles Visual Studio.lastbuildstate".
+     1>Génération du projet "C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Jeux de Jongles Visual Studio\Jeux de Jongles Visual Studio.vcxproj" terminée (build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:04.11
