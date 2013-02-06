@@ -34,3 +34,8 @@ void Tete::moveR() {
 	m_x += speed;
 	this->setPos(m_x, m_y);
 }
+
+void Tete::movekinect(float x){
+
+	this->setPos(x, m_y);
+}

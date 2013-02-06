@@ -8,14 +8,14 @@ Fenetre::Fenetre(qreal width, qreal height, QObject * parent ) : QGraphicsScene(
 
 	tete = new Tete();
 	ballon = new Ballon(width, height);
-
+	nui=new kinect();
 	this->addItem(tete);
 	this->addItem(ballon);
 
 	this->anim_ball = false;
 
 	QPen pen;
-	pen.setColor(Qt::red);
+	pen.setColor(Qt::green);
 	pen.setWidth(5);
 	this->qgei = new QGraphicsEllipseItem(50,50,30,30, 0, this);
 	qgei->setPen(pen);
@@ -55,10 +55,15 @@ void Fenetre::keyPressEvent(QKeyEvent* keyEvent) {
 }
 
 void Fenetre::update(void) {
+	x=nui->return_tete();
+	tete->movekinect(x);
 	if (!anim_ball) return;
 	ballon->move();
 	if (ballon->collidesWithItem(tete)) {
 		qgei->setVisible(true);
+		ballon->inversion();
+		ballon->move();
+
 
 	} else
 		qgei->setVisible(false);

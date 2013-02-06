@@ -7,7 +7,7 @@
 
 #include "tete.h"
 #include "ballon.h"
-
+#include "kinect.h"
 
 class Fenetre : public QGraphicsScene // On hérite de QWidget
 {
@@ -23,11 +23,13 @@ public slots:
 		void update(void);
 
 private:
+	float x;
 	int hauteur;
 	int largeur;
 	QTimer *timer;
 	Tete * tete;
 	Ballon * ballon;
+	kinect * nui;
 	bool anim_ball;
 	QGraphicsEllipseItem * qgei;
 };

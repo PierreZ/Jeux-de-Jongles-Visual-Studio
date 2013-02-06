@@ -16,7 +16,7 @@ public:
 	void setSpeed(int s){speed+=s;}
 	void moveL();
 	void moveR();
-
+	void movekinect(float x);
 
 
 private:

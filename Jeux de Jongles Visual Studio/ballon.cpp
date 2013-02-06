@@ -26,6 +26,17 @@ void Ballon::move() {
 
 	if ((m_x < 0) || ((m_x + this->boundingRect().width()) > scene_width)) v_x = -v_x;
 	if ((m_y < 0) || ((m_y + this->boundingRect().height()) > scene_height)) v_y = -v_y;
+	if (m_y>400)
+		{
+	this->speed_reinit(10,20);
+	this->m_x = 300;
+	this->m_y = 0;
+		}
 
 	this->setPos(m_x, m_y);
+}
+
+void Ballon::inversion() {
+	
+	v_y = -v_y;
 }

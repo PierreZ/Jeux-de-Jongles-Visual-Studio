@@ -13,6 +13,7 @@ public:
 	int getY(){return m_y;}
 	void speed_reinit(int x,int y);
 	void move();
+	void inversion();
 
 private:
 	int scene_width;
