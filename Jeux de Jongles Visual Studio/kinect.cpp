@@ -1,9 +1,9 @@
 #include "kinect.h"
-
+#include <qDebug>
 
 kinect::kinect(void)
 {
-		tetex=0;
+		tetex=400;
 			HANDLE        m_hThNuiProcess;
 		HANDLE        m_hEvNuiProcessStop;
 	m_hThNuiProcess     = NULL;
@@ -25,7 +25,11 @@ hr = NuiImageStreamOpen(     NUI_IMAGE_TYPE_COLOR,
 							0,
 							2,
 							m_hNextVideoFrameEvent,
-							&m_pVideoStreamHandle );  
+							&m_pVideoStreamHandle ); 
+if (FAILED(hr)) {
+        qDebug("Unable to open stream.");
+        return;
+    }
 
 hr = NuiImageStreamOpen(     NUI_IMAGE_TYPE_DEPTH_AND_PLAYER_INDEX,
 							NUI_IMAGE_RESOLUTION_320x240,
@@ -33,6 +37,11 @@ hr = NuiImageStreamOpen(     NUI_IMAGE_TYPE_DEPTH_AND_PLAYER_INDEX,
 							2,
 							m_hNextDepthFrameEvent,
 							&m_pDepthStreamHandle );
+
+if (FAILED(hr)) {
+        qDebug("Unable to open stream.");
+        return;
+    }
 
 	m_hEvNuiProcessStop = CreateEvent(NULL,FALSE,FALSE,NULL);
 	m_hThNuiProcess = CreateThread(NULL,0,Nui_ProcessThread,this,0,NULL);
@@ -47,14 +56,14 @@ DWORD WINAPI kinect::Nui_ProcessThread(LPVOID pParam) {
 
 
 DWORD WINAPI kinect::Nui_ProcessThread() {
-	HANDLE hEvents[4];
+	HANDLE hEvents[3];
 	int    nEventIdx,t,dt;
 
 	// Configure events to be listened on
-	hEvents[0]= m_hEvNuiProcessStop;
-	hEvents[1]= m_hNextDepthFrameEvent;
-	hEvents[2]= m_hNextVideoFrameEvent;
-	hEvents[3]= m_hNextSkeletonEvent;
+	//hEvents[0]= m_hEvNuiProcessStop;
+	hEvents[0]= m_hNextDepthFrameEvent;
+	hEvents[1]= m_hNextVideoFrameEvent;
+	hEvents[2]= m_hNextSkeletonEvent;
 
 #pragma warning(push)
 #pragma warning(disable: 4127) // conditional expression is constant
@@ -66,8 +75,9 @@ DWORD WINAPI kinect::Nui_ProcessThread() {
 		nEventIdx=WaitForMultipleObjects(sizeof(hEvents)/sizeof(hEvents[0]),hEvents,FALSE,100);
 
 		// If the stop event, stop looping and exit
-		if(nEventIdx==0)
-			break;            
+		//if(nEventIdx==0)
+			//break;  
+
 
 				////////////////////////////////////////////////////////////////////////
 				////////////////////////////////////////////////////////////////////////
@@ -80,21 +90,22 @@ DWORD WINAPI kinect::Nui_ProcessThread() {
 
 
 		// Process signal events
-		/*switch(nEventIdx)
+		switch(nEventIdx)
 		{
+		case 0:
+			this->Nui_GotDepthAlert();
+			break;
+
 		case 1:
-			
+			this->Nui_GotVideoAlert();
 			break;
 
 		case 2:
-			
-			break;
-
-		case 3:*/
 			this->Nui_GotSkeletonAlert();
 			break;
-		//}
+		}
 	}
+
 #pragma warning(pop)
 
 	return (0);
@@ -118,6 +129,8 @@ void kinect::Nui_GotSkeletonAlert() {
 			{
 				bFoundSkeleton = true;														// Squelette validé
 				tetex=SkeletonFrame.SkeletonData[i].SkeletonPositions[NUI_SKELETON_POSITION_HEAD].x;
+				tetex = 500 + 1000*tetex;
+				qDebug()<<tetex;
 			} else {				
 
 			}
@@ -152,3 +165,34 @@ void kinect::Nui_GotSkeletonAlert() {
 float kinect::return_tete(){
 			return (tetex);		// Squelette non visible
 		}
+
+
+void kinect::Nui_GotVideoAlert( ) {
+	const NUI_IMAGE_FRAME * pImageFrame = NULL;
+
+	HRESULT hr = NuiImageStreamGetNextFrame(
+		m_pVideoStreamHandle,
+		0,
+		&pImageFrame );
+	if( FAILED( hr ) )
+	{
+		return;
+	}
+		NuiImageStreamReleaseFrame( m_pVideoStreamHandle, pImageFrame );
+	}
+
+void kinect::Nui_GotDepthAlert( ) {
+	const NUI_IMAGE_FRAME * pImageFrame = NULL;
+
+	HRESULT hr = NuiImageStreamGetNextFrame(
+		m_pDepthStreamHandle,
+		0,
+		&pImageFrame );
+
+	if( FAILED( hr ) )
+	{
+		return;
+	}
+	
+	NuiImageStreamReleaseFrame( m_pDepthStreamHandle, pImageFrame );
+	}

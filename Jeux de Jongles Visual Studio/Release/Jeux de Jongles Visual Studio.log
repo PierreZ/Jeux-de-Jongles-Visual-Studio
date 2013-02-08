@@ -1,0 +1,26 @@
+﻿La génération a démarré 07/02/2013 18:50:28.
+     1>Projet "C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Jeux de Jongles Visual Studio\Jeux de Jongles Visual Studio.vcxproj" sur le nœud 2 (build cible(s)).
+     1>PrepareForBuild:
+         Création du répertoire "C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Win32\Release\".
+       InitializeBuildStatus:
+         Création de "Release\Jeux de Jongles Visual Studio.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+       CustomBuild:
+         Moc'ing fenetre.h...
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /IC:\Qt\4.8.4\include /I.\GeneratedFiles\Release /IC:\Qt\4.8.4\include\QtCore /IC:\Qt\4.8.4\include\QtGui /nologo /W1 /WX- /O2 /Oy- /D UNICODE /D WIN32 /D QT_LARGEFILE_SUPPORT /D QT_DLL /D QT_NO_DEBUG /D NDEBUG /D QT_CORE_LIB /D QT_GUI_LIB /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ballon.cpp fenetre.cpp GeneratedFiles\Release\moc_fenetre.cpp kinect.cpp main.cpp tete.cpp
+         ballon.cpp
+         fenetre.cpp
+     1>c:\users\pierre zemb\dropbox\github\jeux de jongles visual studio\jeux de jongles visual studio\kinect.h(5): fatal error C1083: Impossible d'ouvrir le fichier include : 'NuiApi.h' : No such file or directory
+         moc_fenetre.cpp
+     1>c:\users\pierre zemb\dropbox\github\jeux de jongles visual studio\jeux de jongles visual studio\kinect.h(5): fatal error C1083: Impossible d'ouvrir le fichier include : 'NuiApi.h' : No such file or directory
+         kinect.cpp
+     1>c:\users\pierre zemb\dropbox\github\jeux de jongles visual studio\jeux de jongles visual studio\kinect.h(5): fatal error C1083: Impossible d'ouvrir le fichier include : 'NuiApi.h' : No such file or directory
+         main.cpp
+     1>c:\users\pierre zemb\dropbox\github\jeux de jongles visual studio\jeux de jongles visual studio\kinect.h(5): fatal error C1083: Impossible d'ouvrir le fichier include : 'NuiApi.h' : No such file or directory
+         tete.cpp
+         Génération de code en cours...
+     1>Génération du projet "C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Jeux de Jongles Visual Studio\Jeux de Jongles Visual Studio.vcxproj" terminée (build cible(s)) -- ÉCHEC.
+
+ÉCHEC de la build.
+
+Temps écoulé 00:00:07.04

@@ -4,7 +4,7 @@
 Tete::Tete() : QGraphicsPixmapItem() {
 
 	this->setPixmap(QPixmap("tete.png"));
-	
+	QGraphicsPixmapItem::MaskShape;
 	this->m_x = 300;
 	this->m_y = 370;
 	this->speed = 10;

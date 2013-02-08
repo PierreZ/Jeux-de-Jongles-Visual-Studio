@@ -11,6 +11,8 @@ public:
 	~kinect(void);
 	float return_tete();
 private:
+	void Nui_GotDepthAlert( );
+	void Nui_GotVideoAlert( );
 	float tetex;
 		static DWORD WINAPI     Nui_ProcessThread(LPVOID pParam);
 		DWORD WINAPI            Nui_ProcessThread();

@@ -56,15 +56,17 @@ void Fenetre::keyPressEvent(QKeyEvent* keyEvent) {
 
 void Fenetre::update(void) {
 	x=nui->return_tete();
-	tete->movekinect(x);
+	//tete->movekinect(x);
 	if (!anim_ball) return;
 	ballon->move();
 	if (ballon->collidesWithItem(tete)) {
-		qgei->setVisible(true);
-		ballon->inversion();
-		ballon->move();
+
+		//qgei->setVisible(true);
+		//ballon->inversion();
+		ballon->move_collision();
 
 
-	} else
-		qgei->setVisible(false);
+	} else{
+		//qgei->setVisible(false);
+		}
 }

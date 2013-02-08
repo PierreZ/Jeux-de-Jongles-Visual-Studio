@@ -4,7 +4,7 @@
 #include <vector>
 #include <QLabel>
 #include <QGraphicsPixmapItem>
-
+#include <qDebug>
 class Ballon:public QGraphicsPixmapItem //double héritages
 {
 public:
@@ -14,8 +14,9 @@ public:
 	void speed_reinit(int x,int y);
 	void move();
 	void inversion();
-
+	void move_collision();
 private:
+
 	int scene_width;
 	int scene_height;
 	int m_x;
