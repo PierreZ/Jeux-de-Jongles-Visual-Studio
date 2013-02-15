@@ -12,11 +12,11 @@ public:
 
 	int getY(){return m_y;}
 	void speed_reinit(int x,int y);
-	void move();
+	int move();
 	void inversion();
 	void move_collision();
 private:
-
+	int a;
 	int scene_width;
 	int scene_height;
 	int m_x;

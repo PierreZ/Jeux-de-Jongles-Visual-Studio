@@ -1,26 +1,34 @@
-﻿La génération a démarré 07/02/2013 18:50:28.
+﻿La génération a démarré 15/02/2013 12:51:22.
      1>Projet "C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Jeux de Jongles Visual Studio\Jeux de Jongles Visual Studio.vcxproj" sur le nœud 2 (build cible(s)).
-     1>PrepareForBuild:
-         Création du répertoire "C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Win32\Release\".
-       InitializeBuildStatus:
+     1>InitializeBuildStatus:
          Création de "Release\Jeux de Jongles Visual Studio.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
        CustomBuild:
-         Moc'ing fenetre.h...
+         Toutes les sorties sont à jour.
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /IC:\Qt\4.8.4\include /I.\GeneratedFiles\Release /IC:\Qt\4.8.4\include\QtCore /IC:\Qt\4.8.4\include\QtGui /nologo /W1 /WX- /O2 /Oy- /D UNICODE /D WIN32 /D QT_LARGEFILE_SUPPORT /D QT_DLL /D QT_NO_DEBUG /D NDEBUG /D QT_CORE_LIB /D QT_GUI_LIB /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt ballon.cpp fenetre.cpp GeneratedFiles\Release\moc_fenetre.cpp kinect.cpp main.cpp tete.cpp
-         ballon.cpp
-         fenetre.cpp
-     1>c:\users\pierre zemb\dropbox\github\jeux de jongles visual studio\jeux de jongles visual studio\kinect.h(5): fatal error C1083: Impossible d'ouvrir le fichier include : 'NuiApi.h' : No such file or directory
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I. /IC:\Qt\4.8.4\include /I.\GeneratedFiles\Release /IC:\Qt\4.8.4\include\QtCore /IC:\Qt\4.8.4\include\QtGui /I"C:\Program Files\Microsoft SDKs\Kinect\v1.6\\inc" /nologo /W1 /WX- /O2 /Oy- /D UNICODE /D WIN32 /D QT_LARGEFILE_SUPPORT /D QT_DLL /D QT_NO_DEBUG /D NDEBUG /D QT_CORE_LIB /D QT_GUI_LIB /Gm- /EHsc /MD /GS /fp:precise /Zc:wchar_t- /Zc:forScope /Fo"Release\\" /Fd"Release\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt GeneratedFiles\Release\moc_fenetre.cpp fenetre.cpp kinect.cpp main.cpp
          moc_fenetre.cpp
-     1>c:\users\pierre zemb\dropbox\github\jeux de jongles visual studio\jeux de jongles visual studio\kinect.h(5): fatal error C1083: Impossible d'ouvrir le fichier include : 'NuiApi.h' : No such file or directory
+         fenetre.cpp
          kinect.cpp
-     1>c:\users\pierre zemb\dropbox\github\jeux de jongles visual studio\jeux de jongles visual studio\kinect.h(5): fatal error C1083: Impossible d'ouvrir le fichier include : 'NuiApi.h' : No such file or directory
          main.cpp
-     1>c:\users\pierre zemb\dropbox\github\jeux de jongles visual studio\jeux de jongles visual studio\kinect.h(5): fatal error C1083: Impossible d'ouvrir le fichier include : 'NuiApi.h' : No such file or directory
-         tete.cpp
          Génération de code en cours...
-     1>Génération du projet "C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Jeux de Jongles Visual Studio\Jeux de Jongles Visual Studio.vcxproj" terminée (build cible(s)) -- ÉCHEC.
+       ResourceCompile:
+         Toutes les sorties sont à jour.
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Win32\Release\\Jeux de Jongles Visual Studio.exe" /NOLOGO /LIBPATH:C:\Qt\4.8.4\lib /LIBPATH:"C:\Program Files\Microsoft SDKs\Kinect\v1.6\\lib\x86" qtmain.lib QtCore4.lib QtGui4.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib Kinect10.lib /MANIFEST /ManifestFile:"Release\Jeux de Jongles Visual Studio.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /PDB:"C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Win32\Release\Jeux de Jongles Visual Studio.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Win32\Release\Jeux de Jongles Visual Studio.lib" /MACHINE:X86 "Release\Jeux de Jongles Visual Studio.res"
+         Release\ballon.obj
+         Release\fenetre.obj
+         Release\moc_fenetre.obj
+         Release\kinect.obj
+         Release\main.obj
+         Release\tete.obj
+         Jeux de Jongles Visual Studio.vcxproj -> C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Win32\Release\Jeux de Jongles Visual Studio.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Win32\Release\\Jeux de Jongles Visual Studio.exe;#1" /manifest "Release\Jeux de Jongles Visual Studio.exe.intermediate.manifest"
+       FinalizeBuildStatus:
+         Suppression du fichier "Release\Jeux de Jongles Visual Studio.unsuccessfulbuild".
+         Mise à jour de l'horodatage "Release\Jeux de Jongles Visual Studio.lastbuildstate".
+     1>Génération du projet "C:\Users\Pierre Zemb\Dropbox\GitHub\Jeux de Jongles Visual Studio\Jeux de Jongles Visual Studio\Jeux de Jongles Visual Studio.vcxproj" terminée (build cible(s)).
 
-ÉCHEC de la build.
+La génération a réussi.
 
-Temps écoulé 00:00:07.04
+Temps écoulé 00:00:07.32

@@ -20,14 +20,14 @@ void Ballon::speed_reinit(int x,int y) {
 	this->v_y = y;
 }
 
-void Ballon::move() {
+int Ballon::move() {
 	m_x += v_x;
 	m_y += v_y;
-
+	a=0;
 	if ((m_x < 0) || ((m_x + this->boundingRect().width()) > scene_width)) v_x = -v_x;
 	if ((m_y < 0) || ((m_y + this->boundingRect().height()) > scene_height)) v_y = -v_y;
 	if (m_y>505)//Fin du jeu
-		{
+		{a=1;
 	this->speed_reinit(10,20);
 	this->m_x = 300;
 	this->m_y = 0;
@@ -35,6 +35,7 @@ void Ballon::move() {
 
 
 	this->setPos(m_x, m_y);
+return a;
 }
 
 void Ballon::inversion() {
